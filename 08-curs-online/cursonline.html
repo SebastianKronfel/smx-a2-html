@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curs Online</title>
+    <meta name="description" content="Curs Online">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Inscrpcio de curs online de Montatge i manteniment electronic</h1>
+    </header>
+    <main>
+        <form action="./dades.html" method="get"></form>
+        <fieldset>
+            <legend>Dades personals</legend>
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" placeholder="EX: Juanito" required minlength="3" maxlength="20">
+            <br><br>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="correu@domini.com" required>
+            <br><br>
+
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon" name="telefon" pattern="[6-7]{1}[0-9]{8}" placeholder="600332211" required>
+            <br><br>
+
+            <label for="Data de neixament">Data de neixament:</label>
+            <input type="date" id="data" name="data" min="1900-01-01" max="2030-12-31" required>
+            <br><br>
+
+            <legend>Tipus de curs i experiencia previa</legend>
+            <select multiple id="cicle" name="cicle" required>
+                <optgroup>
+                <option value="">-- Selecciona --</option>
+                <option value="asix">Asix</option>
+                <option value="dam">DAM</option>
+                <option value="dam">DAW</option>
+                <option value="ciber">CIBER</option>
+                </optgroup>
+                <optgroup>
+                    <option value="">----Experiencia----</option>
+                    <option value="Asistent de taller">Asistent de taller</option>
+                    <option value="Desarmador personal de dispositius">Desarmador personal de dispositius</option>
+                </optgroup>
+            </select>
+                </select>
+            </optgroup>
+            <label><input type="radio" name="----Experiencia----">----Experiencia----</label>
+            <label><input type="radio" name="Intermedio">Intermedio</label>
+            <label><input type="radio" name="Novat">Novat</label>
+            <label><input type="radio" name="professional">professional</label>
+            <br><br>
+
+            <legend>Interessos i motivacions per el curs</legend>
+            <label><input type="checkbox" name="opcioDesarmdequips">Certificat oficial</label>
+            <label><input type="checkbox" name="opcioCSS"> Projectes practics</label>
+            <br><br>
+            <textarea name="motivacions" id="motivacions" placeholder="motivacions per el curs"></textarea>
+            <datalist>
+
+            </datalist>
+            <br><br>
+
+            <label><input type="file" id="fitxer" name="fitxer" accept="DOCTYPE/pdf">Documents personals dni, etc..</label>
+            <br><br>
+            <label><input type="checkbox" name="acepta tot" id="acepta tot">Acepta tot</label>
+            <br><br>
+            <label><input type="button" value="Enviar">Enviar</label>
+        </fieldset>
+    </main>
+    <footer>
+        <p>&copy;Sebastian Kronfel krofsebastian9@gmail.com diossalvamedehtml.com</p>
+    </footer>
+</body>
+</html>
