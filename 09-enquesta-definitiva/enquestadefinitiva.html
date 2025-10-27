@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquesta Èpica de Superherois</title>
+    <meta name="description" content="Enquesta epica">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <h1>Enquesta Èpica de Superherois</h1>
+    
+    <form action="#" method="POST" id="epic-survey">
+        <fieldset>
+            <legend>Dades Personals</legend>
+            
+            <label for="hero-name">Nom del Superheroi </label>
+            <input type="text" id="hero-name" name="hero-name" required minlength="2" maxlength="50">
+            
+            <label for="email">Correu de Contacte (Representant) </label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Clau Secreta per Headquarters </label>
+            <input type="password" id="password" name="password" required minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" title="La contrasenya ha de tenir almenys 8 caràcters, incloent una lletra majúscula, una minúscula i un número">
+            
+            <label for="battles">Nombre de Batalles Lluitades Aquest Any </label>
+            <input type="number" id="battles" name="battles" required min="0" max="1000">
+            
+            <label for="power-level">Nivell de Poder Actual (1-100) </label>
+            <input type="range" id="power-level" name="power-level" min="1" max="100" value="50" required>
+            <span id="power-value">50</span>
+            
+            <label for="first-appearance">Data de la Primera Aparició </label>
+            <input type="date" id="first-appearance" name="first-appearance" required>
+            
+            <label for="meeting-time">Hora Disponible per Reunions </label>
+            <input type="time" id="meeting-time" name="meeting-time" required>
+            
+            <label for="costume-color">Color Principal del Vestit </label>
+            <input type="color" id="costume-color" name="costume-color" value="#ff0000" required>
+            
+            <label for="website">Pàgina Web Oficial </label>
+            <input type="url" id="website" name="website" placeholder="https://ñoquis.com" required>
+            
+            <label for="emergency-phone">Telèfon d'Emergències </label>
+            <input type="tel" id="emergency-phone" name="emergency-phone" pattern="[0-9]{9}" title="Introdueix un número de telèfon vàlid (9 dígits)" required>
+            
+            <p>Tipus de Personatge </p>
+            <input type="radio" id="hero" name="character-type" value="hero" required>
+            <label for="hero">Heroi</label>
+            <input type="radio" id="sidekick" name="character-type" value="sidekick">
+            <label for="sidekick">Ajudant</label>
+            <input type="radio" id="villain" name="character-type" value="villain">
+            <label for="villain">Malvat</label>
+            
+            <p>Superpoders </p>
+            <input type="checkbox" id="flight" name="powers" value="flight" required>
+            <label for="flight">Volar</label>
+            <input type="checkbox" id="invisibility" name="powers" value="invisibility">
+            <label for="invisibility">Invisibilitat</label>
+            <input type="checkbox" id="super-strength" name="powers" value="super-strength">
+            <label for="super-strength">Superforça</label>
+            <input type="checkbox" id="telekinesis" name="powers" value="telekinesis">
+            <label for="telekinesis">Telequinesi</label>
+            <input type="checkbox" id="telepathy" name="powers" value="telepathy">
+            <label for="telepathy">Telepatia</label>
+            <input type="checkbox" id="healing" name="powers" value="healing">
+            <label for="healing">Curació</label>
+            <input type="checkbox" id="shapeshifting" name="powers" value="shapeshifting">
+            <label for="shapeshifting">Canvi de forma</label>
+            <input type="checkbox" id="time-travel" name="powers" value="time-travel">
+            <label for="time-travel">Viatge en el temps</label>
+            
+            <label for="universe">Univers </label>
+            <select id="universe" name="universe" required>
+                <option value="">Selecciona un univers</option>
+                <option value="marvel">Marvel</option>
+                <option value="dc">DC</option>
+                <option value="manga">Manga</option>
+                <option value="other">Altres</option>
+            </select>
+        </fieldset>
+        
+        
+        <fieldset>
+            <legend>Enemics i Aliats</legend>
+            
+            <label for="favorite-enemy">Quin és el teu enemic preferit? </label>
+            <input type="text" id="favorite-enemy" name="favorite-enemy" required minlength="2" maxlength="50">
+            
+            <p>Amb quin superheroi mai faries equip? </p>
+            <input type="radio" id="no-team-1" name="no-team" value="deadpool" required>
+            <label for="no-team-1">Deadpool</label>
+            <input type="radio" id="no-team-2" name="no-team" value="wolverine">
+            <label for="no-team-2">Wolverine</label>
+            <input type="radio" id="no-team-3" name="no-team" value="batman">
+            <label for="no-team-3">Batman</label>
+            <input type="radio" id="no-team-4" name="no-team" value="hulk">
+            <label for="no-team-4">Hulk</label>
+            <input type="radio" id="no-team-5" name="no-team" value="other">
+            <label for="no-team-5">Un altre</label>
+            
+            <p>Quin és el teu aliat més fiable? </p>
+            <input type="radio" id="ally-1" name="ally" value="spiderman" required>
+            <label for="ally-1">Spider-Man</label>
+            <input type="radio" id="ally-2" name="ally" value="superman">
+            <label for="ally-2">Superman</label>
+            <input type="radio" id="ally-3" name="ally" value="captain-america">
+            <label for="ally-3">Captain America</label>
+            <input type="radio" id="ally-4" name="ally" value="wonder-woman">
+            <label for="ally-4">Wonder Woman</label>
+            <input type="radio" id="ally-5" name="ally" value="other">
+            <label for="ally-5">Un altre</label>
+        </fieldset>
+        
+        
+        <fieldset>
+            <legend>Equipament i Hàbits</legend>
+            
+            <p>Quin seria el teu gadget ideal? </p>
+            <input type="radio" id="gadget-1" name="gadget" value="teletransport" required>
+            <label for="gadget-1">Dispositiu de teletransport</label>
+            <input type="radio" id="gadget-2" name="gadget" value="invisibility-cloak">
+            <label for="gadget-2">Capa d'invisibilitat</label>
+            <input type="radio" id="gadget-3" name="gadget" value="time-machine">
+            <label for="gadget-3">Màquina del temps</label>
+            <input type="radio" id="gadget-4" name="gadget" value="utility-belt">
+            <label for="gadget-4">Cinturó d'eines multifunció</label>
+            <input type="radio" id="gadget-5" name="gadget" value="other">
+            <label for="gadget-5">Un altre</label>
+            
+            <p>On prefereixes establir la teva base secreta? </p>
+            <input type="radio" id="base-1" name="base" value="city" required>
+            <label for="base-1">Enmig de la ciutat</label>
+            <input type="radio" id="base-2" name="base" value="suburbs">
+            <label for="base-2">A les afores</label>
+            <input type="radio" id="base-3" name="base" value="space">
+            <label for="base-3">A l'espai</label>
+            <input type="radio" id="base-4" name="base" value="underground">
+            <label for="base-4">Sota terra</label>
+            <input type="radio" id="base-5" name="base" value="other">
+            <label for="base-5">Un altre lloc</label>
+            
+            <p>Quin és el teu mètode de transport preferit? </p>
+            <input type="radio" id="transport-1" name="transport" value="flight" required>
+            <label for="transport-1">Volant</label>
+            <input type="radio" id="transport-2" name="transport" value="super-speed">
+            <label for="transport-2">Super velocitat</label>
+            <input type="radio" id="transport-3" name="transport" value="vehicle">
+            <label for="transport-3">Vehicle especial</label>
+            <input type="radio" id="transport-4" name="transport" value="teleportation">
+            <label for="transport-4">Teletransportació</label>
+            <input type="radio" id="transport-5" name="transport" value="other">
+            <label for="transport-5">Un altre mètode</label>
+        </fieldset>
+        
+        
+        <fieldset>
+            <legend>Motivacions i Valors</legend>
+            
+            <p>Què et motiva a lluitar contra el crim? </p>
+            <input type="radio" id="motivation-1" name="motivation" value="justice" required>
+            <label for="motivation-1">La cerca de la justícia</label>
+            <input type="radio" id="motivation-2" name="motivation" value="revenge">
+            <label for="motivation-2">Venjar un ésser estimat</label>
+            <input type="radio" id="motivation-3" name="motivation" value="responsibility">
+            <label for="motivation-3">Un sentit de responsabilitat</label>
+            <input type="radio" id="motivation-4" name="motivation" value="thrill">
+            <label for="motivation-4">L'emoció i l'adrenalina</label>
+            <input type="radio" id="motivation-5" name="motivation" value="other">
+            <label for="motivation-5">Una altra raó</label>
+            
+            <p>Quin és el teu lema personal? </p>
+            <input type="text" id="motto" name="motto" required minlength="5" maxlength="100">
+            
+            <p>Com tractes als teus enemics derrotats? </p>
+            <input type="radio" id="enemy-treatment-1" name="enemy-treatment" value="prison" required>
+            <label for="enemy-treatment-1">Els lliuro a les autoritats</label>
+            <input type="radio" id="enemy-treatment-2" name="enemy-treatment" value="rehabilitation">
+            <label for="enemy-treatment-2">Intento rehabilitar-los</label>
+            <input type="radio" id="enemy-treatment-3" name="enemy-treatment" value="exile">
+            <label for="enemy-treatment-3">Els exilio fora de la ciutat</label>
+            <input type="radio" id="enemy-treatment-4" name="enemy-treatment" value="other">
+            <label for="enemy-treatment-4">Una altra solució</label>
+            
+            <p>Creus en matar als teus enemics? </p>
+            <input type="radio" id="killing-1" name="killing" value="never" required>
+            <label for="killing-1">Mai, és la meva línia vermella</label>
+            <input type="radio" id="killing-2" name="killing" value="sometimes">
+            <label for="killing-2">Només en circumstàncies extremes</label>
+            <input type="radio" id="killing-3" name="killing" value="if-necessary">
+            <label for="killing-3">Si és necessari per salvar vides</label>
+            <input type="radio" id="killing-4" name="killing" value="no-problem">
+            <label for="killing-4">No tinc cap problema amb això</label>
+        </fieldset>
+        
+        
+        <fieldset>
+            <legend>Vida Personal i Identitat Secreta</legend>
+            
+            <p>Com mantens la teva identitat secreta? </p>
+            <input type="radio" id="secret-1" name="secret" value="mask" required>
+            <label for="secret-1">Amb una màscara</label>
+            <input type="radio" id="secret-2" name="secret" value="disguise">
+            <label for="secret-2">Amb un disfressa complet</label>
+            <input type="radio" id="secret-3" name="secret" value="no-secret">
+            <label for="secret-3">No tinc identitat secreta</label>
+            <input type="radio" id="secret-4" name="secret" value="other">
+            <label for="secret-4">Un altre mètode</label>
+            
+            <p>Quin és el teu treball de coberta? </label>
+            <input type="text" id="cover-job" name="cover-job" required minlength="2" maxlength="50">
+            
+            <p>Quants coneixen la teva identitat secreta? </p>
+            <input type="radio" id="identity-1" name="identity" value="none" required>
+            <label for="identity-1">Ningú</label>
+            <input type="radio" id="identity-2" name="identity" value="few">
+            <label for="identity-2">Algunes persones de confiança</label>
+            <input type="radio" id="identity-3" name="identity" value="many">
+            <label for="identity-3">Moltes persones</label>
+            <input type="radio" id="identity-4" name="identity" value="everyone">
+            <label for="identity-4">Tothom ho sap</label>
+            
+            <p>Com afecta la teva vida de superheroi a les teves relacions personals? </p>
+            <input type="radio" id="relationships-1" name="relationships" value="negatively" required>
+            <label for="relationships-1">Negativament, és difícil mantenir relacions</label>
+            <input type="radio" id="relationships-2" name="relationships" value="positively">
+            <label for="relationships-2">Positivament, m'ajuda a conèixer gent interessant</label>
+            <input type="radio" id="relationships-3" name="relationships" value="no-effect">
+            <label for="relationships-3">No afecta les meves relacions</label>
+            <input type="radio" id="relationships-4" name="relationships" value="complicated">
+            <label for="relationships-4">És complicat, amb alts i baixos</label>
+        </fieldset>
+        
+        <button type="submit">Enviar Enquesta Èpica</button>
+    </form>
+</body>
+</html>
